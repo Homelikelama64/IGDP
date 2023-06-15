@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "igdp",
+	"version": "${version}",
+	"name": "In-Game DataPack mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Squirrelify"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/igdp/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.squirrelify.igdp.IGDP"
+		],
+		"client": [
+			"net.squirrelify.igdp.IGDPClient"
+		]
+	},
+	"mixins": [
+		"igdp.mixins.json",
+		{
+			"config": "igdp.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"fabric-api": "*",
+		"minecraft": "~1.19.4",
+		"java": ">=17"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
